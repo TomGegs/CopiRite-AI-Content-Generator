@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
-
-import TextInput from "./components/TextInput";
+import FormContainer from "./components/FormContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -10,13 +9,13 @@ export const metadata = {
 
 export default function Home() {
     return (
-        <main className="max-w-7xl mx-auto py-12">
-            <h2 className="text-2xl font-bold text-center">
-                Marketing Copy Generator
-            </h2>
-            <div>
-                <TextInput />
+        <div className="min-h-[100dvh] w-screen flex flex-col">
+            <div className="relative flex flex-grow flex-col">
+                {/* <nav></nav> */}
+                <main className="flex-1 mx-auto">
+                    <FormContainer />
+                </main>
             </div>
-        </main>
+        </div>
     );
 }
