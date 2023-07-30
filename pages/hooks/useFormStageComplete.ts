@@ -10,5 +10,4 @@ export function useFormStageComplete(stages: boolean[]) {
   return isStageCompleted;
 }
 
-
 export default useFormStageComplete;

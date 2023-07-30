@@ -87,7 +87,7 @@ const Summary: FC<SummaryProps> = ({ formData }) => {
                         {/* Length of copy */}
                     </p>
                 </div>
-                <p className="">
+                <p>
                     The A.I. copi-bots are ready! Click the button below to
                     create your marketing copy.
                 </p>
