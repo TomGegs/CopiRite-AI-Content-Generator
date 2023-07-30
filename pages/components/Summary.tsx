@@ -1,6 +1,6 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { FormWrapper } from "./FormWrapper";
-import { useFormState, FormData } from "../hooks/useFormState";   
+import { FormData } from "../hooks/useFormState";
 type SummaryProps = {
     formData: FormData;
 };

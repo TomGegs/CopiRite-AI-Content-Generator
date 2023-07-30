@@ -1,4 +1,4 @@
-import { FC, FormEvent, useEffect, useState } from "react";
+import { FC, FormEvent } from "react";
 import { useMultistepForm } from "../hooks/useMultistepForm";
 import { PlatformDetails } from "./PlatformDetails";
 import { ToneDetails } from "./ToneDetails";
