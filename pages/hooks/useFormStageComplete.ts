@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 
 export function useFormStageComplete(stages: boolean[]) {
   const [isStageCompleted, setIsStageCompleted] = useState(false);
@@ -10,3 +10,5 @@ export function useFormStageComplete(stages: boolean[]) {
   return isStageCompleted;
 }
 
+
+export default useFormStageComplete;

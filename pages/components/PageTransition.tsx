@@ -173,3 +173,5 @@ export function PageTransition() {
         </>
     );
 }
+
+export default PageTransition;

@@ -102,3 +102,5 @@ export const useFormState = () => {
         setNextButtonClicked,
     };
 };
+
+export default useFormState;

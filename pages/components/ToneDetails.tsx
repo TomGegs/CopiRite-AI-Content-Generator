@@ -198,3 +198,5 @@ export function ToneDetails({
         </FormWrapper>
     );
 }
+
+export default ToneDetails;

@@ -1,3 +1,4 @@
+import React from "react";
 
 type ProgressBarProps = {
     currentStepIndex: number;
@@ -27,3 +28,5 @@ export function ProgressBar({ currentStepIndex, steps }: ProgressBarProps) {
         </>
     );
 }
+
+export default ProgressBar;

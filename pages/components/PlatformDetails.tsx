@@ -31,7 +31,6 @@ export function PlatformDetails({
     updateFields,
     setPlatformStageCompleted,
 }: PlatformDetailsProps) {
-  
     const [platformSelected, setPlatformSelected] = useState<boolean[]>([
         facebook,
         twitter,
@@ -210,3 +209,5 @@ export function PlatformDetails({
         </FormWrapper>
     );
 }
+
+export default PlatformDetails;

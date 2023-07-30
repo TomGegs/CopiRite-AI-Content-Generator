@@ -18,3 +18,5 @@ export function FormWrapper({ title, lastWord, children }: FormWrapperProps) {
         </>
     );
 }
+
+export default FormWrapper;

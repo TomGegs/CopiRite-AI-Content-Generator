@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 
 export function Hero() {
@@ -33,3 +34,5 @@ export function Hero() {
         </div>
     );
 }
+
+export default Hero;

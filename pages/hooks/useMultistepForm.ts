@@ -48,3 +48,5 @@ export function useMultistepForm(steps: ReactElement[]) {
         sleep,
     };
 }
+
+export default useMultistepForm;

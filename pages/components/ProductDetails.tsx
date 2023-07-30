@@ -151,3 +151,5 @@ export function ProductDetails({
         </FormWrapper>
     );
 }
+
+export default ProductDetails;
