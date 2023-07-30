@@ -25,15 +25,15 @@ const Summary: FC<SummaryProps> = ({ formData }) => {
                     <p>
                         Provides: {/* Product or Service */}
                         <span className="text-primary text-[1rem] font-semibold md:text-2xl">
-                            {formData.product ? "Product" : "Service"}
+                            {formData?.product ? "Product" : "Service"}
                         </span>
                     </p>
                     <p>
-                        About your {formData.product ? "product" : "service"}:
+                        About your {formData?.product ? "product" : "service"}:
                         {/* explanation of product / service */}
                         <span className="text-primary text-[1.2rem] font-semibold md:text-2xl">
                             {" "}
-                            {formData.userInput}
+                            {formData?.userInput}
                         </span>
                     </p>
                 </div>
@@ -42,45 +42,45 @@ const Summary: FC<SummaryProps> = ({ formData }) => {
                     <p>
                         Length:{" "}
                         <span className="text-primary text-[1rem] font-semibold md:text-2xl">
-                            {formData.shortCopy ? "Short" : null}
-                            {formData.mediumCopy ? "Medium" : null}
-                            {formData.longCopy ? "Long" : null}
+                            {formData?.shortCopy ? "Short" : null}
+                            {formData?.mediumCopy ? "Medium" : null}
+                            {formData?.longCopy ? "Long" : null}
                         </span>
                     </p>
                     <p>
                         Optimised for: {/* Social Platforms */}
                         <span className="text-primary text-[1rem] font-semibold md:text-2xl">
-                            {formData.instagram ? "Instagram" : null}
-                            {formData.facebook ? "Facebook" : null}
-                            {formData.twitter ? "Twitter" : null}
-                            {formData.linkedin ? "LinkedIn" : null}
-                            {formData.threads ? "Threads" : null}
-                            {formData.generalCopy ? "General use" : null}
+                            {formData?.instagram ? "Instagram" : null}
+                            {formData?.facebook ? "Facebook" : null}
+                            {formData?.twitter ? "Twitter" : null}
+                            {formData?.linkedin ? "LinkedIn" : null}
+                            {formData?.threads ? "Threads" : null}
+                            {formData?.generalCopy ? "General use" : null}
                         </span>
                     </p>
                     <p>
                         Tone of voice: {/* Tone of voice */}
                         <span className="text-primary text-[1rem] font-semibold md:text-2xl">
-                            {formData.casualTone ? "Casual" : null}
-                            {formData.professionalTone ? "Professional" : null}
-                            {(!formData.noTone1 && !formData.noTone2) ||
-                            (!formData.noTone1 && !formData.noTone3)
+                            {formData?.casualTone ? "Casual" : null}
+                            {formData?.professionalTone ? "Professional" : null}
+                            {(!formData?.noTone1 && !formData?.noTone2) ||
+                            (!formData?.noTone1 && !formData?.noTone3)
                                 ? " , "
                                 : null}
-                            {formData.funnyTone ? "Funny" : null}
-                            {formData.seriousTone ? "Serious" : null}
-                            {!formData.noTone2 && !formData.noTone3
+                            {formData?.funnyTone ? "Funny" : null}
+                            {formData?.seriousTone ? "Serious" : null}
+                            {!formData?.noTone2 && !formData?.noTone3
                                 ? " , "
                                 : null}
-                            {formData.enthusiasticTone ? "Enthusiastic" : null}
-                            {formData.informativeTone ? "Informative" : null}
-                            {formData.noTone1 &&
-                            formData.noTone2 &&
-                            formData.noTone3
+                            {formData?.enthusiasticTone ? "Enthusiastic" : null}
+                            {formData?.informativeTone ? "Informative" : null}
+                            {formData?.noTone1 &&
+                            formData?.noTone2 &&
+                            formData?.noTone3
                                 ? "General"
-                                : formData.noTone1 ||
-                                  formData.noTone2 ||
-                                  formData.noTone3
+                                : formData?.noTone1 ||
+                                  formData?.noTone2 ||
+                                  formData?.noTone3
                                 ? " , General"
                                 : null}
                         </span>
