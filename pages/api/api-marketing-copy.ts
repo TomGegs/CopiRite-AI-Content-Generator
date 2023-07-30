@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { configuration } from "../../utils/constants";
-import { FormData } from "../hooks/useFormState";
+import { FormData } from "../../hooks/useFormState";
 
 const { OpenAIApi } = require("openai");
 

@@ -1,5 +1,5 @@
 import { FC, FormEvent } from "react";
-import { useMultistepForm } from "../hooks/useMultistepForm";
+import { useMultistepForm } from "../../hooks/useMultistepForm";
 import { PlatformDetails } from "./PlatformDetails";
 import { ToneDetails } from "./ToneDetails";
 import { ProductDetails } from "./ProductDetails";
@@ -8,7 +8,7 @@ import Summary from "./Summary";
 import OpenAIOutput from "./OpenAIOutput";
 import ProgressBar from "./ProgressBar";
 import { PageTransition } from "./PageTransition";
-import { useFormState, FormData } from "../hooks/useFormState";
+import { useFormState, FormData } from "../../hooks/useFormState";
 
 const FormContainer: FC = () => {
     const {

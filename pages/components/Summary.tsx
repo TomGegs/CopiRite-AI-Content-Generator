@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { FormWrapper } from "./FormWrapper";
-import { FormData } from "../hooks/useFormState";
+import { FormData } from "../../hooks/useFormState";
 type SummaryProps = {
     formData: FormData;
 };
@@ -19,7 +19,7 @@ const Summary: FC<SummaryProps> = ({ formData }) => {
                         {/* Name of business */}
                         <span className="text-primary text-[1rem] font-semibold md:text-2xl">
                             {" "}
-                            {formData.nameOfBusiness}
+                            {formData?.nameOfBusiness}
                         </span>
                     </p>
                     <p>
