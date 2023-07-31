@@ -137,7 +137,7 @@ export function ProductDetails({
                     onChange={handleUserInput}
                     value={userInput}
                     className="textInput w-full resize-none text-sm  "
-                    placeholder={`Enter a short description of your ${
+                    placeholder={`Write a short description of your ${
                         product ? "product" : "service"
                     }`}
                 />

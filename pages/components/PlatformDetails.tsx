@@ -165,10 +165,10 @@ export function PlatformDetails({
             })
           }
         >
-          General
+          Website
         </button>
       </div>
-      <label>Character length</label>
+      <label>Copy character length</label>
       <div className="grid grid-cols-3 gap-3">
         <button
           type="button"

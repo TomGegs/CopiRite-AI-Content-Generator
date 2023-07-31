@@ -55,33 +55,35 @@ const Summary: FC<SummaryProps> = ({ formData }) => {
                             {formData?.twitter ? "Twitter" : null}
                             {formData?.linkedin ? "LinkedIn" : null}
                             {formData?.threads ? "Threads" : null}
-                            {formData?.generalCopy ? "General use" : null}
+                            {formData?.generalCopy
+                                ? "Website or general use"
+                                : null}
                         </span>
                     </p>
                     <p>
                         Tone of voice: {/* Tone of voice */}
                         <span className="text-primary text-[1rem] font-semibold md:text-2xl">
                             {formData?.casualTone ? "Casual" : null}
-                            {formData?.professionalTone ? "Professional" : null}
+                            {formData?.professionalTone ? "Formal" : null}
                             {(!formData?.noTone1 && !formData?.noTone2) ||
                             (!formData?.noTone1 && !formData?.noTone3)
-                                ? " , "
+                                ? ", "
                                 : null}
                             {formData?.funnyTone ? "Funny" : null}
                             {formData?.seriousTone ? "Serious" : null}
                             {!formData?.noTone2 && !formData?.noTone3
-                                ? " , "
+                                ? ", "
                                 : null}
                             {formData?.enthusiasticTone ? "Enthusiastic" : null}
                             {formData?.informativeTone ? "Informative" : null}
                             {formData?.noTone1 &&
                             formData?.noTone2 &&
                             formData?.noTone3
-                                ? "General"
+                                ? "Neutral"
                                 : formData?.noTone1 ||
                                   formData?.noTone2 ||
                                   formData?.noTone3
-                                ? " , General"
+                                ? ", Neutral"
                                 : null}
                         </span>
                         {/* Length of copy */}
