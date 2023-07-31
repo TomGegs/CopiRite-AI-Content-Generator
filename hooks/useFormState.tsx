@@ -29,16 +29,16 @@ export type FormData = {
 
 const INITIAL_DATA: FormData = {
   nameOfBusiness: "",
-  product: false,
+  product: true,
   service: false,
   userInput: "",
-  facebook: false,
+  facebook: true,
   twitter: false,
   instagram: false,
   linkedin: false,
   threads: false,
   generalCopy: false,
-  shortCopy: false,
+  shortCopy: true,
   mediumCopy: false,
   longCopy: false,
   casualTone: false,
@@ -47,9 +47,9 @@ const INITIAL_DATA: FormData = {
   seriousTone: false,
   enthusiasticTone: false,
   informativeTone: false,
-  noTone1: false,
-  noTone2: false,
-  noTone3: false,
+  noTone1: true,
+  noTone2: true,
+  noTone3: true,
 };
 
 export const useFormState = () => {

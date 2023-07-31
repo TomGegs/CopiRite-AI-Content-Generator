@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, use, useEffect, useState } from "react";
 import { FormWrapper } from "./FormWrapper";
 type ToneData = {
     casualTone: boolean;
@@ -29,40 +29,37 @@ export function ToneDetails({
     updateFields,
     setToneStageCompleted,
 }: ToneDetailsProps) {
-    const [firstToneSelected, setFirstToneSelected] = useState(false);
-    const [secondToneSelected, setSecondToneSelected] = useState(false);
-    const [thirdToneSelected, setThirdToneSelected] = useState(false);
+    const [tone1, setTone1] = useState<boolean[]>([
+        casualTone,
+        professionalTone,
+        noTone1,
+    ]);
+    const [tone2, setTone2] = useState<boolean[]>([
+        funnyTone,
+        seriousTone,
+        noTone2,
+    ]);
+    const [tone3, setTone3] = useState<boolean[]>([
+        enthusiasticTone,
+        informativeTone,
+        noTone3,
+    ]);
 
     useEffect(() => {
-        // Set the copyStageCompleted when firstToneSelected or secondToneSelected or thirdToneSelected changes
-        if (firstToneSelected && secondToneSelected && thirdToneSelected) {
-            setToneStageCompleted(true);
-        } else {
-            setToneStageCompleted(false);
-        }
-    });
-
-    useEffect(() => {
-        // Set the firstToneSelected when at least one tone is selected
-        setFirstToneSelected(casualTone || professionalTone || noTone1);
-    }, [casualTone, professionalTone, noTone1]);
-
-    useEffect(() => {
-        // Set the secondToneSelected when at least one tone is selected
-        setSecondToneSelected(funnyTone || seriousTone || noTone2);
-    }, [funnyTone, seriousTone, noTone2]);
-
-    useEffect(() => {
-        // Set the thirdToneSelected when at least one tone is selected
-        setThirdToneSelected(enthusiasticTone || informativeTone || noTone3);
-    }, [enthusiasticTone, informativeTone, noTone3]);
+        const tone1HasSelection = tone1.some((option) => option);
+        const tone2HasSelection = tone2.some((option) => option);
+        const tone3HasSelection = tone3.some((option) => option);
+        setToneStageCompleted(
+            tone1HasSelection && tone2HasSelection && tone3HasSelection
+        );
+    }, [tone1, tone2, tone3, setToneStageCompleted]);
 
     return (
         <FormWrapper title="your" lastWord="style">
-            <label>Build  the tone of your copy</label>
+            <label>Select tones that best suits your copy</label>
 
             {/* Tone of voice group 1 */}
-            <p>Style 1</p>
+            <p>Tone 1</p>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-3">
                 <button
                     type="button"

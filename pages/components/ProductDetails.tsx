@@ -70,7 +70,6 @@ export function ProductDetails({
             <label>Business name</label>
             <input
                 className="textInput"
-                autoFocus
                 required
                 placeholder="Enter your business name"
                 type="text"
