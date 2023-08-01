@@ -21,7 +21,7 @@ const OpenAIOutput: FC<OpenAIOutputProps> = ({ suggestion, loading }) => {
       {suggestion !== null && (
         <div className="mt-6">
           <h3 className="text-foreground text-lg font-semibold pb-2">
-            The A.I. wizards have wizarded this up for you:
+            The AI wizards have wizarded this up for you:
           </h3>
           <div className="relative w-full border-4 border-primary rounded-md bg-gray-100 p-4 pb-8">
             <p className="text-base md:text-lg text-gray-700 select-all whitespace-normal break-words">

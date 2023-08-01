@@ -26,7 +26,7 @@ export function Hero() {
         te
       </h1>
       <p className="mx-auto w-[85%] lg:w-[80%] text-foreground font-darkerGrotesque text-xl md:text-[3rem] my-10 leading-none lg:leading-10 transition-[all_0.5_ease-in-out] text-center">
-        A.I. generated social media marketing copy for your product or service
+        AI generated social media marketing copy for your product or service
         in seconds.
         <br />
       </p>

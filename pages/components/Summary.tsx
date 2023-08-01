@@ -90,7 +90,7 @@ const Summary: FC<SummaryProps> = ({ formData }) => {
                     </p>
                 </div>
                 <p>
-                    The A.I. copi-bots are ready! Click the button below to
+                    The AI copi-bots are ready! Click the button below to
                     create your marketing copy.
                 </p>
             </div>

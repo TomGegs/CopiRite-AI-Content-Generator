@@ -18,7 +18,8 @@
 }
 
 body {
-  background-image: linear-gradient(
+  background-image: 
+  linear-gradient(
       to top,
       rgba(var(--background-rgb), var(--alpha90)),
       rgba(var(--background-rgb), var(--alpha100))
@@ -154,10 +155,11 @@ textarea {
 
 @media screen and (max-width: 768px) {
   body {
-    background-image: linear-gradient(
+    background-image: 
+    linear-gradient(
         to top,
-        rgba(var(--background-rgb), var(--alpha90)),
-        rgba(var(--background-rgb), var(--alpha100))
+        rgba(var(--background-rgb), var(--alpha10)),
+        rgba(var(--background-rgb), var(--alpha25))
       ),
       url("/copi.rite-background-Mobile.webp");
   }

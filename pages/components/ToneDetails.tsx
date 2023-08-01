@@ -56,7 +56,7 @@ export function ToneDetails({
 
     return (
         <FormWrapper title="your" lastWord="style">
-            <label>Select tones that best suits your copy</label>
+            <label>Select the tones that best suit your copy</label>
 
             {/* Tone of voice group 1 */}
             <p>Tone 1</p>

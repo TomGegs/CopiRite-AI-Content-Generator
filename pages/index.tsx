@@ -2,7 +2,7 @@ import FormContainer from "./components/FormContainer";
 
 export const metadata = {
     title: "Copi.Rite",
-    description: "A.I. generated marketing copy for your product or service.",
+    description: "AI generated marketing copy for your product or service.",
 };
 
 export default function Home() {

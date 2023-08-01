@@ -7,7 +7,7 @@ export default function Document() {
         {/* Add meta tags here */}
         <meta
           name="Copi.Rite"
-          content="A.I. generated marketing copy for your product or service."
+          content="AI generated marketing copy for your product or service."
         />
       </Head>
       <body>
