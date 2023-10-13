@@ -104,7 +104,6 @@ const FormContainer: FC = () => {
         }
         // Reset the nextButtonClicked state after submitting the form
         setNextButtonClicked(false);
-        //     // Set the stage completion status based on the form data
         setProductStageButtonSelected(
             !!formData.nameOfBusiness &&
                 !!formData.userInput &&
