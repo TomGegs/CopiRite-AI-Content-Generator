@@ -22,6 +22,22 @@ To install the project, follow these steps:
 1. Clone the repository
 2. Run `npm install` to install the dependencies
 
+## Dependencies
+
+- node: `20.4.0`
+- react: `18.2.14`
+- react-dom: `18.2.6`
+- autoprefixer: `10.4.14`
+- eslint: `8.44.0`
+- eslint-config-next: `13.4.9`
+- next: `13.4.9`
+- openai: `^3.3.0`
+- postcss: `8.4.25`
+- react: `18.2.0`
+- react-dom: `18.2.0`
+- tailwindcss: `3.3.2`
+- typescript: `5.1.6`
+
 ## Usage
 
 To start the development server, run `npm run dev`.
