@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import { configuration } from "../../utils/constants";
 import { FormData } from "../../hooks/useFormState";
@@ -72,12 +71,29 @@ export default async function handler(
         : "a website or general online marketing purposes";
 
     // consolidated form data options into a prompt for the API
-    const userPrompt = `You are a marketing expert and professional copywriter. You have been hired by a business called ${nameOfBusiness} to create compelling marketing copy for their ${productOrService}. Your task is to write engaging and persuasive copy that effectively promotes their ${productOrService} to their target audience. The copy should have a ${toneSelection1}, ${toneSelection2} and ${toneSelection3} tone of voice to resonate with their customers. It should be tailored for ${socialPlatform} and optimized for ${copyLength} in length. The business has provided the following information about their ${productOrService}: ${userInput}. Use this information to craft compelling marketing copy that highlights the unique features and benefits of their ${productOrService}. Your goal is to create high-quality copy that captures the attention of potential customers, conveys the value of the ${productOrService}, and compels them to take action. Remember to pay attention to grammar, Australian spelling, and punctuation to deliver polished copy that reflects the value of the business. Please generate marketing copy that aligns with these requirements.`;
+    const rolePrompt = `You are a marketing expert and professional copywriter. You have been hired by a business called ${nameOfBusiness} to create compelling marketing copy for their ${productOrService}. Your task is to write engaging and persuasive copy that effectively promotes their ${productOrService} to their target audience. The copy should have a ${toneSelection1}, ${toneSelection2} and ${toneSelection3} tone of voice to resonate with their customers. It should be tailored for ${socialPlatform} and optimized for ${copyLength} in length. The business will provided information about their ${productOrService} in their message. Use the information they provide to craft compelling marketing copy that highlights the unique features and benefits of their ${productOrService}. Your goal is to create high-quality copy that captures the attention of potential customers, conveys the value of the ${productOrService}, and compels them to take action. Remember to pay attention to grammar, Australian spelling, and punctuation to deliver polished copy that reflects the value of the business. Please generate marketing copy that aligns with these requirements.`;
 
+    const userPrompt = `Here are the details about my business' ${productOrService}: ${userInput}`;
     try {
         // OpenAI prompt
+        const completion = await openai.chat.completions.create({
+            messages: [
+                {
+                    role: "system",
+                    content: rolePrompt,
+                },
+                { role: "user", content: userPrompt },
+            ],
+            model: "gpt-3.5-turbo-1106",
+            response_format: { type: "json_object" },
+                        temperature: 0.85,
+            max_tokens: 256,
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0,
+        });
         const response = await openai.createCompletion({
-            model: "text-davinci-003",
+            model: "gpt-3.5-turbo", // Correct model name
             prompt: userPrompt,
             temperature: 0.85,
             max_tokens: 256,
@@ -87,16 +103,16 @@ export default async function handler(
         });
 
         // Extract the suggestion from the response
-        const suggestion = response.data.choices[0].text;
+        const suggestion = response.data.choices[0].text.trim();
 
-        if (suggestion === undefined) {
+        if (!suggestion) {
             throw new Error("No suggestion found");
         }
 
         // API call
         res.status(200).json({ suggestion });
     } catch (error) {
-        console.log(error);
+        console.error(error);
         res.status(500).json({ suggestion: null });
     }
 }
