@@ -96,7 +96,7 @@ const FormContainer: FC = () => {
         } else {
             setIsGenerateClicked(true);
             await Promise.all([
-                sleep(2000),
+                sleep(2500),
                 submit(),
                 new Promise((resolve) => setTimeout(resolve, 1000)),
             ]);

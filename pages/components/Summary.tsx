@@ -86,12 +86,11 @@ const Summary: FC<SummaryProps> = ({ formData }) => {
                                 ? ", Neutral"
                                 : null}
                         </span>
-                        {/* Length of copy */}
                     </p>
                 </div>
                 <p>
-                    The AI copi-bots are ready! Click the button below to
-                    create your marketing copy.
+                    The AI copi-bots are ready! Click the button below to create
+                    your marketing copy.
                 </p>
             </div>
         </FormWrapper>

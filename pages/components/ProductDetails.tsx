@@ -95,11 +95,12 @@ export function ProductDetails({
                         updateFields({ product: true, service: false })
                     }>
                     <Image
-                        src={"/product.png"}
+                        src={"/product.webp"}
                         alt="service"
                         width={40}
                         height={40}
                         className={`${product ? "opacity-100" : "opacity-20"}`}
+                        loading="eager"
                     />
                     Product
                 </button>
@@ -113,11 +114,12 @@ export function ProductDetails({
                         updateFields({ product: false, service: true })
                     }>
                     <Image
-                        src={"/service.png"}
+                        src={"/service.webp"}
                         alt="service"
                         width={50}
                         height={50}
                         className={`${service ? "opacity-100" : "opacity-20"}`}
+                        loading="eager"
                     />
                     Service
                 </button>
